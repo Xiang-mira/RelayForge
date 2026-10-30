@@ -1,0 +1,20 @@
+name: relayforge
+services:
+  postgres:
+    image: postgres:17-bookworm@sha256:858bb5e98eed02eb8cafbcdc007f9a65d1b613972028944a8ec2133ccaf80d27
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-relayforge}
+      POSTGRES_DB: ${POSTGRES_DB:-relayforge}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run scripts/configure.ps1 first}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+volumes:
+  postgres_data:

@@ -1,0 +1,7 @@
+FROM relayforge-sandbox:local
+USER root
+COPY pytest-requirements.txt /tmp/pytest-requirements.txt
+RUN python -m pip install --no-cache-dir --require-hashes -r /tmp/pytest-requirements.txt
+USER 65532:65532
+ENV PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
+CMD ["python", "-I", "-m", "pytest", "-v", "--color=no", "-p", "no:cacheprovider", "--import-mode=importlib"]

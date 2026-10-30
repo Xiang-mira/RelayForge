@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
+  <title id="title">RelayForge：点击观看 118 秒项目介绍</title>
+  <desc id="desc">Coding Agent 可靠执行底座。工具权限、测试验收、外部操作恢复。</desc>
+  <rect width="1280" height="520" rx="20" fill="#171714"/>
+  <rect x="1" y="1" width="1278" height="518" rx="20" fill="none" stroke="#46433b"/>
+  <g fill="none" stroke="#ddc49c" stroke-width="4"><path d="M66 70l20-18h25M66 70l20 19h25"/><circle cx="66" cy="70" r="4" fill="#efe8dc"/><circle cx="111" cy="52" r="4" fill="#efe8dc"/><circle cx="111" cy="89" r="4" fill="#efe8dc"/></g>
+  <g font-family="Segoe UI,Microsoft YaHei,Arial,sans-serif">
+    <text x="139" y="85" font-size="42" font-weight="700" fill="#f2eee5">RelayForge</text>
+    <text x="66" y="199" font-size="52" font-weight="700" fill="#f2eee5">让 Agent 的执行，有据可查。</text>
+    <text x="68" y="258" font-size="26" fill="#b8b3a7">工具权限 · 版本绑定验收 · Effect Journal · 故障恢复</text>
+    <g font-size="23" fill="#d6ccbb">
+      <rect x="68" y="314" width="250" height="65" rx="12" fill="#25251f" stroke="#4b473c"/>
+      <text x="112" y="356">模型提出操作</text>
+      <text x="348" y="356" fill="#ddc49c">→</text>
+      <rect x="398" y="314" width="250" height="65" rx="12" fill="#25251f" stroke="#ddc49c"/>
+      <text x="440" y="356">运行时核验证据</text>
+      <text x="678" y="356" fill="#ddc49c">→</text>
+      <rect x="728" y="314" width="250" height="65" rx="12" fill="#25251f" stroke="#4b473c"/>
+      <text x="772" y="356">受控执行与恢复</text>
+    </g>
+    <circle cx="1118" cy="343" r="51" fill="#ddc49c"/>
+    <path d="M1104 320l37 23-37 23z" fill="#171714"/>
+    <text x="68" y="460" font-size="23" fill="#ddc49c">▶ 点击观看项目演示</text>
+    <text x="976" y="460" font-size="21" fill="#b8b3a7">01:58 / 1080p</text>
+  </g>
+</svg>

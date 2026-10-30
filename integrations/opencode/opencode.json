@@ -1,0 +1,46 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "enabled_providers": [
+    "openai"
+  ],
+  "share": "disabled",
+  "snapshot": false,
+  "default_agent": "relayforge",
+  "agent": {
+    "relayforge": {
+      "mode": "primary",
+      "description": "Bounded RelayForge MCP coding task",
+      "steps": 28,
+      "prompt": "Use only relayforge_* MCP tools. Never use native shell, read, write, edit, task, skills, or network tools. Work only inside the context returned by begin_task. Inspect actual source and tests, run the registered Docker profile, decide corrections from actual feedback, inspect diff, and request finish_task. Prepare a stable new request_key/action before each new mutation/test/finish. Never retry UNKNOWN with a new identity or infer success. Stop on approval, permission, budget or unresolved UNKNOWN. Only finish_task can accept a task."
+    },
+    "title": {
+      "disable": true
+    }
+  },
+  "mcp": {
+    "relayforge": {
+      "type": "local",
+      "command": [
+        "REPLACE_WITH_ABSOLUTE_BACKEND_PYTHON_PATH",
+        "-m",
+        "relayforge.mcp_server"
+      ],
+      "enabled": true,
+      "timeout": 60000,
+      "environment": {
+        "RELAYFORGE_API_URL": "http://127.0.0.1:8000",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  },
+  "permission": {
+    "*": "deny",
+    "relayforge_*": "allow",
+    "doom_loop": "deny",
+    "external_directory": "deny"
+  },
+  "plugin": [],
+  "lsp": false,
+  "formatter": false
+}
